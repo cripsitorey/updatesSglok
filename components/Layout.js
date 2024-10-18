@@ -22,7 +22,7 @@ export default function Layout({ children }) {
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else if (lightMode) {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('dark');
     }
     return;
   };
@@ -35,7 +35,7 @@ export default function Layout({ children }) {
         document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
       } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'light');
       }
     };
